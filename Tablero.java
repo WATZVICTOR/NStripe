@@ -22,7 +22,17 @@ public class Tablero extends JPanel  {
 		addMouseListener(new MouseHandler());
 		
 	}
-
+	
+	// (Metodo consola) - Imprime el tablero en consola
+	public void ImprimirTablero() {
+		for (int i = 0 ; i < tablero.length ; i++) {
+			System.out.println();
+			for (int j = 0 ; j < tablero[0].length ; j++) {
+				System.out.print(tablero[i][j]+" ");
+			}
+		}
+	}
+	
 	public boolean Dentro_Tablero(int X, int Y) {
 		
 		if( X >= this.MARGEN &&																//Rectangulo superior
